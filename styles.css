@@ -1,0 +1,90 @@
+body,
+html {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: #f0f0f0;
+  font-family: Arial, sans-serif;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.slack-info {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.slack-info img {
+  width: 80px;
+  height: 80px;
+}
+
+.slack-name {
+  font-size: 24px;
+  font-weight: bold;
+  margin-top: 10px;
+}
+
+.slack-name::before {
+  content: 'Slack Name: ';
+  display: block;
+  font-weight: normal;
+  font-size: 20px;
+}
+
+.date-time {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.current-day::before {
+  content: 'Current Day of the Week: ';
+  display: block;
+  font-weight: bold;
+}
+
+.current-utc-time::before {
+  content: 'Current UTC Time (milliseconds): ';
+  display: block;
+  font-weight: bold;
+}
+
+.track {
+  font-size: 18px;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+.github-link {
+  text-align: center;
+}
+
+.github-link a {
+  text-decoration: none;
+  color: #0078d4;
+  font-weight: bold;
+}
+
+@media screen and (max-width: 768px) {
+  .slack-name {
+    font-size: 20px;
+    margin-top: 8px;
+  }
+
+  .current-day::before,
+  .current-utc-time::before {
+    font-size: 16px;
+  }
+
+  .track {
+    font-size: 16px;
+  }
+}
