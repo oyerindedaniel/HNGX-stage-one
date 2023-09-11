@@ -1,3 +1,6 @@
+const currentDayElement = document.querySelector('.current-day');
+const currentUTCTimeElement = document.querySelector('.current-utc-time');
+
 function getCurrentDayOfWeek() {
   const daysOfWeek = [
     'Sunday',
@@ -14,13 +17,12 @@ function getCurrentDayOfWeek() {
 }
 
 function getCurrentUTCTime() {
-  return Date.now();
+  const currentUTC = Date.now();
+  currentUTCTimeElement.textContent = currentUTC;
 }
 
 document.addEventListener('DOMContentLoaded', function () {
-  const currentDayElement = document.querySelector('.current-day');
-  const currentUTCTimeElement = document.querySelector('.current-utc-time');
-
   currentDayElement.textContent = getCurrentDayOfWeek();
-  currentUTCTimeElement.textContent = getCurrentUTCTime();
+
+  setInterval(getCurrentUTCTime, 1000);
 });
