@@ -27,17 +27,26 @@ body {
   height: 80px;
 }
 
-.slack-name {
-  font-size: 24px;
+.slack-name,
+.slack-email {
+  font-size: 22px;
   font-weight: bold;
   margin-top: 10px;
 }
 
 .slack-name::before {
-  content: 'Slack Name: ';
+  content: "Slack Name: ";
+}
+
+.slack-email::before {
+  content: "Slack Email: ";
+}
+
+.slack-name::before,
+.slack-email::before {
   display: block;
   font-weight: normal;
-  font-size: 20px;
+  font-size: 18px;
 }
 
 .date-time {
@@ -46,31 +55,25 @@ body {
 }
 
 .current-day::before {
-  content: 'Current Day of the Week: ';
+  content: "Current Day of the Week: ";
   display: block;
   font-weight: bold;
 }
 
 .current-utc-time::before {
-  content: 'Current UTC Time (milliseconds): ';
+  content: "Current UTC Time (milliseconds): ";
   display: block;
   font-weight: bold;
 }
 
-.track {
-  font-size: 18px;
-  font-weight: bold;
-  margin-bottom: 20px;
+.goals h2 {
+  font-size: 20px;
+  margin-bottom: 4px;
 }
 
-.github-link {
+.goals p {
+  font-size: 16px;
   text-align: center;
-}
-
-.github-link a {
-  text-decoration: none;
-  color: #0078d4;
-  font-weight: bold;
 }
 
 @media screen and (max-width: 768px) {
